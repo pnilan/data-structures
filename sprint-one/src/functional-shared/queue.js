@@ -21,7 +21,6 @@ queueMethods.enqueue = function(value) {
   }
 
   this.storage[maxKey + 1] = value;
-  console.log('enqueue: ' + value + ', '+ JSON.stringify(this.storage));
 };
 
 queueMethods.dequeue = function() {
@@ -34,7 +33,6 @@ queueMethods.dequeue = function() {
 
   var tempValue = this.storage[minKey];
   delete this.storage[minKey];
-  console.log('dequeue: ' + tempValue + ', ' + JSON.stringify(this.storage));
   return tempValue;
 
 };
