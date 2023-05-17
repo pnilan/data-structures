@@ -11,9 +11,7 @@ var Queue = function() {
     var maxKey = 0;
 
     for (var key in storage) {
-      if (maxKey === undefined) {
-        maxKey = Number(key);
-      } else if (Number(key) > maxKey) {
+      if (maxKey === undefined || Number(key) > maxKey) {
         maxKey = Number(key);
       }
     }
@@ -27,9 +25,7 @@ var Queue = function() {
     var lowestKey;
     for (var key in storage) {
 
-      if (lowestKey === undefined) {
-        lowestKey = Number(key);
-      } else if (Number(key) < lowestKey) {
+      if (lowestKey === undefined || Number(key) < lowestKey) {
         lowestKey = Number(key);
       }
     }
